@@ -1,0 +1,438 @@
+<!doctype html>
+<!--[if lt IE 7 ]> <html class="ie6" lang="en"> <![endif]-->
+<!--[if IE 7 ]>    <html class="ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]>    <html class="ie8" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--> <html class="no-js" lang="en" dir="ltr"> <!--<![endif]-->
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>The World Bank - Mapping the Extractive Industries</title>
+    <meta name="keywords" content="Ghana,Extractives in Africa,Extractive Industries,World,health,poverty,millenium development goals,indicators,development,humanitarian">
+    <meta name="author" content="World Bank">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="http://maps.worldbank.org/favicon.ico">
+    <link type="text/css" rel="stylesheet" media="all" href="./css/tipsy.css" />
+    <link rel="stylesheet" href="./css/mapping.css">
+    <link rel="stylesheet" href="./css/menu.css">
+    <script type="text/javascript" src="./js/tipsy.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/wb_behaviors.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/tmpl.js"></script>
+<script type="text/javascript" charset="utf-8" src="http://maps.worldbank.org/javascripts/f1.api.js"></script>
+<script src="./js/map.js" type="text/javascript"></script>
+
+    <script type="text/javascript" charset="utf-8">
+      // if (top.frames.length!=0)
+      //   top.location=self.document.location;
+    </script>
+</head>
+
+<body onload="onload()">
+	<div id="container" class="clearfix">
+        <div id="header" class="clearfix">
+        	<a class="network-name" href="http://www.worldbank.org">The World Bank</a>
+            <div id="hdrLang">
+            	<ul class="links network-language-links">
+                    <li class="en first"><a class="active" href="http://www.worldbank.org">English</a></li>
+                    <li class="es"><a href="http://www.bancomundial.org">Español</a></li>
+                    <li class="fr"><a href="http://www.banquemondiale.org">Français</a></li>
+                    <li class="ru"><a href="http://www.worldbank.org/russian">Pусский</a></li>
+                    <li class="ar"><a href="http://www.albankaldawli.org">عربي</a></li>
+                    <li class="cn"><a href="http://www.worldbank.org.cn/Chinese">中文</a></li>
+                    <li class="more last"><a href=	"http://web.worldbank.org/WBSITE/EXTERNAL/0,,contentMDK:20130470~pagePK:50016803~piPK:50016805~theSitePK:13,00.html">View more</a></li>
+				</ul>
+            </div>
+            <div class="network-search">
+                <form id="wbbase-search-form" method="post" accept-charset="UTF-8" action="./">
+                    <div>
+                        <div id="edit-search-wrapper" class=" form-item">
+                            <input type="text" class="form-text fluid" value="Search" id="edit-search" name="search" maxlength="128">
+                        </div>
+                        <input type="submit" class="form-submit" value="Go" id="edit-submit-2" name="op">
+                        <input type="hidden" value="form-75689b15b8ef25b8092598b8620c6cb4" id="form-75689b15b8ef25b8092598b8620c6cb4" name="form_build_id">
+                        <input type="hidden" value="wbbase_search_form" id="edit-wbbase-search-form" name="form_id">
+                    </div>
+                </form>
+            </div>
+            <div class="socialLinks clearfix">
+            	<a href="http://www.facebook.com/worldbank"><img src="./images/icon_fb.png" alt="facebook" width="16" height="16" /></a> | 
+            	<a href="http://www.twitter.com/worldbank"><img src="./images/icon_twitter.png" alt="twitter" width="16" height="16" /></a>
+            </div><!--#socialLinks//-->
+            <div class="navigation clearfix main">
+                <div class="bgRedHome"><a class="network-home" href="http://www.worldbank.org">The World Bank</a></div>
+                <ul class="links network-links"><li class="about first"><a href="http://www.worldbank.org/about">About<span class="point"></span></a></li>
+                    <li class="data"><a href="http://data.worldbank.org/">Data<span class="point"></span></a></li>
+                    <li class="research"><a href="http://econ.worldbank.org">Research<span class="point"></span></a></li>
+                    <li class="learning"><a href="http://www.worldbank.org/wbi">Learning<span class="point"></span></a></li>
+                    <li class="news"><a href="http://www.worldbank.org/news">News<span class="point"></span></a></li>
+                    <li class="projects"><a class="active" href="http://www.worldbank.org/projects">Projects &amp; Operations<span class="point"></span></a></li>
+                    <li class="publications last"><a href="http://www.worldbank.org/reference">Publications<span class="point"></span></a></li>
+                </ul>
+                <ul class="links network-special-links">
+                    <li class="countries first"><a href="http://www.worldbank.org/countries">Countries<span class="point"></span></a></li>
+                    <li class="topics last"><a href="http://www.worldbank.org/topics">Topics<span class="point"></span></a></li>
+                </ul>
+            </div><!--.navigation//-->
+            <div id="local" class="clearfix">
+            	<div class="site-name"><a class="active" href="#">Mapping the Extractive Industries</a> - <a href="#">Ghana</a>, <a href="./extractives/afr">Extractives in Africa</a></div>
+            </div>
+        </div><!--#header//-->
+        <div id="main-wrap" style="">
+            <div id="share">
+  	<ul class="dropmenu map-options">
+  	  
+  	  <li class="about">
+  	   <span></span><a href="#" id="about_link" title="About">About</a>
+  	   <ul class="dropmenu_options">
+  	     <li><a href="./extractives/about_extractives" id="" title="About">About the data</a></li>
+  	     <li><a href="./extractives/how_extractives" id="" title="How">How-to guide</a></li>
+  	   </ul>
+  	  </li>
+  	  
+  	    
+          <li class="download"><a title="download" href="#" id="download_data"><span></span>DOWNLOAD</a>     
+              <ul class="dropmenu_options" id="data_links">
+              </ul>
+           </li>     
+        
+        
+          <li class="share"><a title="share" href="#" id="share_options"><span></span>SHARE</a>
+              <ul class="dropmenu_options">
+                <li><a title="embed" href="#" id="embed_map"><span></span>Embed Map</a></li>
+                <li><a href="http://twitter.com/home?status=The+World+Bank+-+Mapping+the+Extractive+Industries+http://maps.worldbank.org/extractives/afr/ghana" target="_new" id="twitter_link" onclick="return twt_click()">Twitter</a></li>
+                <li><a rel="nofollow" href="http://www.facebook.com/share.php?u=http://maps.worldbank.org/extractives/afr/ghana" class="fb_share_button" onclick="return fbs_click()" target="_blank" style="text-decoration:none;">Facebook</a> </li>
+                <!-- <li><a href="#" id="">Embed the Map</a></li> -->
+              </ul>
+          </li>
+          
+      </ul>
+  </div>
+    <div id="share_window" style="display: none;">
+    <a id="close_embed" href="#" style="" title="Close this embed window.">[x]</a>
+    <h3 style="color: #FFF">Embed this map by copying the text below and pasting it into your blog or website.</h3>
+    <textarea cols="120" rows="5" readonly="readonly" style="font-size: 0.9em" id="embed_code">
+    </textarea><br />
+    <h3 style="color: #FFF">...or copy and paste this link to share the current view with others.</h3>
+    <input type="text" size="109" id="share_link" value="" />
+  </div>
+  
+    	<div class="main clearfix" id="main-map">
+        	<div id="map-content-header">
+            <div class="worldmenuholder">
+            	<a class="mag-glass" href="#" id="map_mag"></a>
+                            <ul id="country_menu" class="worldmenu dropmenu">
+                <li class="first"><a href="#" onclick="return false;" style="0">GHANA</span></a>
+                
+                <div class="menu-world-options" style="display:none">
+                  <ul class="menu-regions dropmenu_options" id="navmenu" style="">
+                <li class="first"><a href="./">World</a></li>
+                <style type="text/css" media="screen">
+                  li.region-option:hover div { display: block; }
+                </style>
+                
+                <li class="region-option active"><a href="./afr"><span>Africa</span><span class="pointer" onclick="return false"></span></a>
+                    <div class="menu-country-options">
+                </div>
+                </li>
+              </ul>
+
+              <div id="map-summary-container" style="">
+        <h1 id="map-summary" style="display:none" class="loaded txtRed txtGeorgia">
+      
+        	<span id="project_count">&nbsp;&nbsp;&nbsp;&nbsp;</span> <span class="smallHdr" id="active_projects_header">financed activities working in</span> <span id="activity_count">&nbsp;&nbsp;&nbsp;&nbsp;</span> <span class="smallHdr" id="mapped_locations_header">mapped locations</span>
+      
+        </h1>
+</div>        
+
+            </div>
+      </div>
+      <div id="map-area">
+        
+        <div id="map-content-hdr2">
+                    <ul class="map-options dropmenu ">
+            <li><span>BASE MAP:</span></li>
+            <li>
+              <a href="#" id="layercontrol_indicators" class="arwOrange" onclick="wb.setIndicator(); return false">INDICATORS</a>
+              <ul class="dropmenu_options">
+                
+                
+                <li><a href="#" onclick="wb.setIndicator('Population Density'); return false">Population Density</a></li>
+                
+                
+                
+                <li><a href="#" onclick="wb.setIndicator('Unemployment Rate'); return false">Unemployment Rate</a></li>
+                
+                
+                
+                <li><a href="#" onclick="wb.setIndicator('Malnutrition'); return false">Malnutrition</a></li>
+                
+                
+                
+                <li><a href="#" onclick="wb.setIndicator('Infant Mortality'); return false">Infant Mortality</a></li>
+                
+                
+                
+                <li><a href="#" onclick="wb.setIndicator('Maternal Health'); return false">Maternal Health</a></li>
+                
+                
+                
+                <li><a href="#" onclick="wb.setIndicator('Total employment'); return false">Total employment</a></li>
+                
+                
+              </ul>
+            </li>
+          </ul>
+          
+<ul id="activities_menu" class="map-options dropmenu">
+  <li class="sectors"><span>ACTIVITIES: </span></li>
+  <li><a href="#" id="layercontrol_projects" class="arwOrange" onclick="return wb.toggleSector('none',false)">By Sector</a>
+    <ul class="dropmenu_options">
+      <li><a href="#" onclick="wb.toggleSector('all', true); return false">By Sector</a></li>
+      <li><a href="#" onclick="wb.toggleSector('counts_admin1', true); return false">By Count</a></li>
+      <li><a href="#" onclick="wb.toggleSector('none',false); return false">No Activities</a></li>
+    </ul>
+  </li>
+</ul>
+
+      <div id="map-content-icons">
+        <div id="map-content-icons2">
+          <ul>
+          
+          <li style="margin-left: 11px; margin-right: 11px;">Sector:</li>
+          
+            <li class="s1"><a  sector-name="public" original-title="Public Administration, Law, and Justice" class="sectorcontrol inactive" id="sectorcontrol_public" href="#">1</a></li>
+            <li class="s2"><a  sector-name="agriculture" original-title="Agriculture, fishing, and forestry" class="sectorcontrol inactive" id="sectorcontrol_agriculture" href="#">2</a></li>
+            <li class="s3"><a  sector-name="health" original-title="Health and other social services" class="sectorcontrol inactive" id="sectorcontrol_health" href="#">3</a></li>
+            <li class="s4"><a  sector-name="communications" original-title="Information and communications" class="sectorcontrol inactive" id="sectorcontrol_communications" href="#">4</a></li>
+            <li class="s5"><a  sector-name="energy" original-title="Energy and mining" class="sectorcontrol inactive" id="sectorcontrol_energy" href="#">5</a></li>
+            <li class="s6"><a  sector-name="finance" original-title="Finance" class="sectorcontrol inactive" id="sectorcontrol_finance" href="#">6</a></li>
+            <li class="s7"><a  sector-name="industry" original-title="Industry and Trade" class="sectorcontrol inactive" id="sectorcontrol_industry" href="#">7</a></li>
+            <li class="s8"><a  sector-name="transportation" original-title="Transportation" class="sectorcontrol inactive" id="sectorcontrol_transportation" href="#">8</a></li>
+            <li class="s9"><a  sector-name="water" original-title="Water, sanitation and flood protection" class="sectorcontrol inactive" id="sectorcontrol_water" href="#">9</a></li>
+            <li class="s10"><a sector-name="education" original-title="Education" class="sectorcontrol inactive" id="sectorcontrol_education" href="#">10</a> </li>            
+              
+             <li class="s11 all"><form action="" method="get">
+                <input name="input" id="sall" class="" type="checkbox" value=""./>
+              </form></li>
+            <li class="all">ALL</li>
+            
+          </ul>
+        </div>
+      </div>
+      <div id="map-content-regions" style="display:none">
+        <ul class="radio-prov">
+          <li class="control" onclick="wb.toggleSector('counts_admin1', true); return false">
+            <input type="radio" id="select_province" value="province" name="by_region"./>
+            <label>PROVINCE</label>
+          </li>
+          <li class="control" onclick="wb.toggleSector('counts_admin2', true); return false">
+            <input type="radio" id="select_district" value="district"  name="by_region"./>
+            <label>DISTRICT</label>
+          </li>
+        </ul>
+      </div>       
+
+  
+        </div>
+        
+        
+        <div id="map-content-hdr3">
+        <style type="text/css" media="screen">
+#activities_menu {display: none;}
+.all {display:none}
+</style>
+<ul id="extractives_menu" class="map-options dropmenu">
+  <li class="sectors"><span>EXTRACTIVES: </span></li>
+  <li><a href="#" id="layercontrol_extractives" class="arwOrange" >Mines Production</a>
+    <ul class="dropmenu_options">
+      <li class="dropmenu_category">Mines</li>
+      <li><a href="#" onclick="wb.setExtractiveIndicator('Mines','Total production','Production',true); return false">Production</a></li>
+      <li><a href="#" onclick="wb.setExtractiveIndicator('Mines','Total company payments','Company Payments',true); return false">Company Payments</a></li>
+      <li><a href="#" onclick="wb.setExtractiveIndicator('Mines','Total government receipts','Government Receipts',true); return false">Government Receipts</a></li>
+      <li><a href="#" onclick="wb.setExtractiveIndicator('Mines','Total employment','Employment',true); return false">Employment</a></li>
+      <li><a href="#" onclick="wb.setExtractiveIndicator('Mines','Location','Location',true); return false">Location</a></li>
+
+      <li class="dropmenu_category">District Revenues</li>
+      <li><a href="#" onclick="wb.setExtractiveIndicator('District revenues','Total revenues received','Revenues',true); return false">Revenues</a></li>
+
+      <li class="dropmenu_category">Oil Wells</li>
+      <li><a href="#" onclick="wb.setExtractiveIndicator('Oil wells','Lift total','Production',true); return false">Production</a></li>
+      <li><a href="#" onclick="wb.setExtractiveIndicator('Oil wells','Sale total','Oil sales',true); return false">Oil sales</a></li>
+      <li><a href="#" onclick="wb.setExtractiveIndicator('Oil wells','Location','Location',true); return false">Location</a></li>
+    </ul>
+  </li>
+</ul>
+
+<div id="map-content-icons">
+  <div id="map-content-icons2">
+    <ul id="mines_sectors">
+      <li style="margin-left: 11px; margin-right: 11px;">Mines:</li>
+      <li class="egoldmine"><a  sector-name="gold" original-title="Gold" class="active" id="Goldmine_control" href="#">1</a></li>
+      <li class="emanganesemine"><a  sector-name="manganese" original-title="Manganese" class="active" id="Manganesemine_control" href="#">2</a></li>
+      <li class="ebauxitemine"><a  sector-name="bauxite" original-title="Bauxite" class="active" id="Bauxitemine_control" href="#">3</a></li>
+      <li class="eothermine"><a  sector-name="other" original-title="Other" class="active" id="Othermine_control" href="#">3</a></li>
+      
+      <li class="all"><form action="" method="get">
+        <input name="input" id="allmine_control" class="active" type="checkbox" value="" CHECKED/>
+      </form></li>
+      <li id="" class="all">ALL</li>
+      
+    </ul>
+    <ul id="ore_sectors">
+      <li style="margin-left: 11px; margin-right: 11px;">Ores:</li>
+      <li class="egolddeposit"><a  sector-name="gold" original-title="Gold" class="inactive" id="Golddeposit_control" href="#">1</a></li>
+      <li class="emanganesedeposit"><a  sector-name="manganese" original-title="Manganese" class="inactive" id="Manganesedeposit_control" href="#">2</a></li>
+      <li class="ebauxitedeposit"><a  sector-name="bauxite" original-title="Bauxite" class="inactive" id="Bauxitedeposit_control" href="#">3</a></li>
+      <li class="eotherdeposit"><a  sector-name="other" original-title="Other" class="inactive" id="Otherdeposit_control" href="#">3</a></li>
+      
+      <li class="all"><form action="" method="get">
+        <input name="input" id="alldeposit_control" class="inactive" type="checkbox" value=""./>
+      </form></li>
+      <li id="" class="all">ALL</li>
+      
+    </ul> 
+    <ul id="oil_sectors">
+      <li style="margin-left: 11px; margin-right: 11px;">Oil:</li>
+      <li class="eoildeposit"><a  sector-name="oildeposit" original-title="Oil fields" class="active" id="oildeposits_control" href="#">1</a></li>
+      <li class="eoilwell"><a  sector-name="oilwell" original-title="Oil wells" class="active" id="oilwells_control" href="#">2</a></li>
+      
+      <li class="all"><form action="" method="get">
+        <input name="input" id="alloil_control" class="active" type="checkbox" value="" CHECKED/>
+      </form></li>
+      <li id="" class="all">ALL</li>
+      
+    </ul>              
+  </div>
+</div>
+<script src="./js/extractives.js" type="text/javascript"></script>
+
+<script type="text/javascript" charset="utf-8">
+  jq("#sall").attr('checked', false);  
+</script>      
+
+        </div>
+        
+        <div style="height: 530px;" id="wb_map_wrapper"><div id="wb_map" class="" style="height: 520px; position: relative"></div></div>
+      </div>
+        <!--Table Data Begins-->
+<div id="map-table">
+</div>
+<!--Data Table Ends-->
+
+
+
+<style type="text/css" media="screen">
+  #project-info th#th-header-0 { width: 20%}
+</style>
+
+        </div><!--#main-map//-->
+        </div><!--#main-wrap//-->
+        <div class="rightCol clearfix" id="rightCol">
+  <div id="rightHdr"><a class="mag-glass" href="#"></a></div>
+    
+  <div id="rightInfo" class="clearfix">
+    <h3 class="clearfix" id="left-chart-title"><span class="rightHdr">FINANCED ACTIVITIES BY SECTOR</span> <a class="arwOrange" style="display:none" href="javascript: return false;">BY SECTOR</a></h3>
+    <span id="chart-left-stat">                
+      <h4 id="sector_funding_total" class="bigNumber"></h4>
+      <h2 id="sector_funding_description" style="display: none"></h2>
+    </span>
+    <div id="chart-left-pie-chart"></div>
+    <br class="clear" />
+    
+    <div style="display:none">
+    <div id="chart-right-stat-subtitle">
+      <h4 id="funding_total" class="txtRed txtGeorgia"></h4>
+    </div>
+    <div id="chart-right-stat">                
+      <h4 id="sector_funding_total" class="txtRed txtGeorgia"></h4>
+    </div>
+    <div id="chart-right-graph"></div>
+    <br class="clear" />
+  </div>        
+
+    <a class="moreData" href="http://data.worldbank.org/country/ghana" title="more data">MORE DATA</a>
+    <br class="clear" />
+  </div>
+
+  <div id="rightDesc">
+      
+      <h3>GHANA LINKS</h3>
+      <ul class="disc">
+        
+        
+        <li><a href="./extractives/about_extractives" target="_new">About Extractives Mapping &raquo;</a></li>
+        
+        
+        <li><a href="http://www.worldbank.org/gh" target="_new">Ghana Home &raquo;</a></li>
+        
+        
+        <li><a href="http://go.worldbank.org/QAKWTY7640" target="_new">Ghana Country Brief &raquo;</a></li>
+        
+        
+        <li><a href="http://go.worldbank.org/N7TQDIGV60" target="_new">Results Profile &raquo;</a></li>
+        
+        
+        <li><a href="http://web.worldbank.org/WBSITE/EXTERNAL/EXTABOUTUS/IDA/0,,contentMDK:21204309~pagePK:51236175~piPK:437394~theSitePK:73154,00.html" target="_new">IDA at Work in Ghana &raquo;</a></li>
+        
+      </ul>
+          
+    <!-- <p class="desc">
+      <a class="txtRed" href="#">See All Results for Ghana &raquo;</a>
+    </p> -->
+    <h3>GHANA</h3>
+      With strong, broad-based economic growth for close to two decades, Ghana today has reason to be optimistic. The country has enjoyed two peaceful democratic transitions, with a strong civil society and media playing active roles. Ghana also remains on course to achieve the Millennium Development Goal of halving poverty by 2015, with economic growth averaging 6–7 percent since 2005.
+    <!-- <p class="desc">
+      Learn more about the World Bank's overall strategy in the <a href="#" class="txtRed">GHANA Country Overview &raquo;</a>
+    </p> -->
+  </div>
+</div>
+        </div><!--#main-wrap//-->
+                <br class="clear" />
+        <div id="footnote">Active financed activities as of December 14, 2011.</div>
+        <div id="network-breadcrumb"><div class="limiter clear-block">
+    	<span class="breadcrumb-link"><a class="breadcrumb-link-home">You are here</a></span><span class="breadcrumb-link breadcrumb-first"><a href="http://www.worldbank.org/projects">Projects &amp; Operations</a></span>
+    	<span class="breadcrumb-link breadcrumb-first"><a href="http://maps.worldbank.org">Map</a></span>
+        <a class="breadcrumb-link" href="./" title='World Bank: World'>World</a><a class="breadcrumb-link " href="./extractives">Extractive Industries</a><a class="breadcrumb-link " href="./extractives/afr">Extractives in Africa</a><a class="breadcrumb-link breadcrumb-last" href="./extractives/afr/ghana">Ghana</a>   
+        </div>
+        </div>
+        <div id="network-footer">
+      <div class="limiter"> <a href="http://www.worldbank.org" class="network-name">The World Bank</a>
+        <div class="network-footer-nav">
+          <ul class="links network-footer-links">
+            <li><a href="http://www.worldbank.org/sitemap">Site Map</a></li>
+            <li><a href="http://www.worldbank.org/siteindex">Index</a></li>
+            <li><a href="http://www.worldbank.org/help">FAQs</a></li>
+            <li><a href="http://web.worldbank.org/WBSITE/EXTERNAL/EXTABOUTUS/0,,contentMDK:20041066~menuPK:34582~pagePK:43912~piPK:44037~theSitePK:29708,00.html">Contact Us</a></li>
+            <li><a href="http://www.worldbank.org/search.htm">Search</a></li>
+            <li><a href="http://developer.worldbank.org">API</a></li>
+            <li class="rss last"><a href="http://www.worldbank.org/rss">RSS</a></li>
+          </ul>
+          <div class="network-footer-legal"> &copy; 2012 <a href="http://www.worldbankgroup.org">The World Bank Group</a>, All Rights Reserved. <a href="http://web.worldbank.org/WBSITE/EXTERNAL/0,,contentMDK:20146401~pagePK:50016803~piPK:50016805~theSitePK:13,00.html">Legal</a>.</div>
+        </div>
+        <div class="network-footer-hotline"> <a href="http://web.worldbank.org/WBSITE/EXTERNAL/EXTABOUTUS/ORGANIZATION/ORGUNITS/EXTDOII/0,,contentMDK:20659616~menuPK:1702202~pagePK:64168445~piPK:64168309~theSitePK:588921,00.html">Fraud &amp; Corruption Hotline</a><br>
+          <a href="http://web.worldbank.org/WBSITE/EXTERNAL/EXTABOUTUS/ORGANIZATION/ORGUNITS/EXTDOII/0,,contentMDK:20659616~menuPK:1702202~pagePK:64168445~piPK:64168309~theSitePK:588921,00.html">1-800-831-0463</a></div>
+      </div>
+    </div>
+    <br class="clear" />
+
+
+        <script type="text/javascript" charset="utf-8">
+  var wb = null;
+  function onload() {
+  wb = new F1.WorldBank();
+  
+
+  var projects = [];
+      
+  wb.init("895",  "Ghana", "Extractives in Africa", {projects_count: '39', locations_count: '14', projects: projects, locations_layer: 0, indicators: ['Population Density','Unemployment Rate','Malnutrition','Infant Mortality','Maternal Health','Total employment'], layers: null, page_type: "country", thematic_area: "extractives_controls"}, false);
+  
+  }
+</script>
+
+
+    </div><!--#container//-->
+
+
+
+</body>
+</html>
