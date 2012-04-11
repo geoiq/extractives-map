@@ -18,7 +18,7 @@
     <script type="text/javascript" src="./js/tipsy.js"></script>
 <script type="text/javascript" charset="utf-8" src="./js/wb_behaviors.js"></script>
 <script type="text/javascript" charset="utf-8" src="./js/tmpl.js"></script>
-<script type="text/javascript" charset="utf-8" src="http://maps.worldbank.org/javascripts/f1.api.js"></script>
+<script type="text/javascript" charset="utf-8" src="http://geocommons.com/javascripts/f1.api.js"></script>
 <script src="./js/map.js" type="text/javascript"></script>
 
     <script type="text/javascript" charset="utf-8">
@@ -120,26 +120,16 @@
         	<div id="map-content-header">
             <div class="worldmenuholder">
             	<a class="mag-glass" href="#" id="map_mag"></a>
-                            <ul id="country_menu" class="worldmenu dropmenu">
+                <ul id="country_menu" class="worldmenu dropmenu">
                 <li class="first"><a href="#" onclick="return false;" style="0">GHANA</span></a>
-                
-                <div class="menu-world-options" style="display:none">
-                  <ul class="menu-regions dropmenu_options" id="navmenu" style="">
-                <li class="first"><a href="./">World</a></li>
-                <style type="text/css" media="screen">
-                  li.region-option:hover div { display: block; }
-                </style>
-                
-                <li class="region-option active"><a href="./afr"><span>Africa</span><span class="pointer" onclick="return false"></span></a>
-                    <div class="menu-country-options">
-                </div>
                 </li>
               </ul>
 
               <div id="map-summary-container" style="">
-        <h1 id="map-summary" style="display:none" class="loaded txtRed txtGeorgia">
+          <h1 id="map-summary" style="display:none" class="loaded txtRed txtGeorgia">
       
-        	<span id="project_count">&nbsp;&nbsp;&nbsp;&nbsp;</span> <span class="smallHdr" id="active_projects_header">financed activities working in</span> <span id="activity_count">&nbsp;&nbsp;&nbsp;&nbsp;</span> <span class="smallHdr" id="mapped_locations_header">mapped locations</span>
+        	<span id="project_count">&nbsp;&nbsp;&nbsp;&nbsp;</span> <span class="smallHdr" id="active_projects_header">financed activities working in</span> 
+          <span id="activity_count">&nbsp;&nbsp;&nbsp;&nbsp;</span> <span class="smallHdr" id="mapped_locations_header">mapped locations</span>
       
         </h1>
 </div>        
@@ -306,9 +296,6 @@
 </div>
 <script src="./js/extractives.js" type="text/javascript"></script>
 
-<script type="text/javascript" charset="utf-8">
-  jq("#sall").attr('checked', false);  
-</script>      
 
         </div>
         
@@ -420,11 +407,9 @@
   var wb = null;
   function onload() {
   wb = new F1.WorldBank();
-  
-
   var projects = [];
       
-  wb.init("895",  "Ghana", "Extractives in Africa", {projects_count: '39', locations_count: '14', projects: projects, locations_layer: 0, indicators: ['Population Density','Unemployment Rate','Malnutrition','Infant Mortality','Maternal Health','Total employment'], layers: null, page_type: "country", thematic_area: "extractives_controls"}, false);
+  wb.init("152433",  "Ghana", "Extractives in Africa", {projects_count: '39', locations_count: '14', projects: projects, locations_layer: 0, indicators: ['Population Density','Unemployment Rate','Malnutrition','Infant Mortality','Maternal Health','Total employment'], layers: null, page_type: "country", thematic_area: "extractives_controls"}, false);
   
   }
 </script>

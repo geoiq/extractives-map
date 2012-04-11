@@ -1,4 +1,4 @@
-var proxy_host = "http://maps.worldbank.org";	   
+var proxy_host = "http://geocommons.com";	   
 var project_attributes = ["id","project_name","totalamt","prodlinetext","grantamt","mjsector1","boardapprovaldate","majorsector_percent"];
 var major_sector_name = "mjsector 1";
 var barchart;
@@ -312,12 +312,12 @@ if(typeof(F1)=='undefined') {F1 = {};}
         self.map.addLayerCategoryFilter(self.stylelayers[indicator].guid, F1.WorldBank.extractives[indicator]["Icons"]);
 	  } else {
     	  s_attr = F1.WorldBank.extractives[indicator][attribute];
-    	  s_attr.icon.selectedAttribute = attribute;
+    	  // s_attr.icon.selectedAttribute = attribute;
 	      self.map.setLayerStyle(self.stylelayers[indicator].guid, s_attr);
 	  }
-	  self.map.setLayerInfoWindow(self.stylelayers[indicator].guid, {
-	        title: F1.WorldBank.extractives[indicator]["infoWindowFilter"]["title"], 
-	        subtitle: s_attr["infoWindowFilter"]["subtitle"], tabs: F1.WorldBank.extractives[indicator]["infoWindowFilter"]["tabs"]});
+	  // self.map.setLayerInfoWindow(self.stylelayers[indicator].guid, {
+	  //       title: F1.WorldBank.extractives[indicator]["infoWindowFilter"]["title"], 
+	  //       subtitle: s_attr["infoWindowFilter"]["subtitle"], tabs: F1.WorldBank.extractives[indicator]["infoWindowFilter"]["tabs"]});
 	  jq('#layercontrol_extractives').html(title);
 	  return false;
 	},
@@ -409,7 +409,7 @@ if(typeof(F1)=='undefined') {F1 = {};}
             self.map.showLayer(self.stylelayers[layer].guid, true);
             
             self.map.addFilter(self.stylelayers[layer].guid, 
-                {expression: self.complexFilterExpression(visibleDeposits, "mineral type")});
+                {expression: self.complexFilterExpression(visibleDeposits, "mineral ty")});
         } else {
             self.map.showLayer(self.stylelayers[layer].guid, false);
         }
@@ -425,7 +425,7 @@ if(typeof(F1)=='undefined') {F1 = {};}
         if(visibleDeposits.length != 0 ){
             self.map.showLayer(self.stylelayers[layer].guid, true);
             self.map.addFilter(self.stylelayers[layer].guid, 
-                {expression: self.complexFilterExpression(visibleDeposits, "mineral type")});             
+                {expression: self.complexFilterExpression(visibleDeposits, "mineral ty")});             
         } else {
             self.map.showLayer(self.stylelayers[layer].guid, false);
         }
@@ -944,8 +944,8 @@ if(typeof(F1)=='undefined') {F1 = {};}
         minerals = []
 		var links = []
         jq.each(mineral_type, function(type,amount) {
-            minerals.push({"Mineral type": type, "Total_government_receipts": amount})
-            links.push("javascript:wb.highlightMine('mineral type', '" + type + "');")
+            minerals.push({"mineral ty": type, "Total_government_receipts": amount})
+            links.push("javascript:wb.highlightMine('mineral ty', '" + type + "');")
         })
         pie_options = {"features":minerals, 
         "attributes": {"data":{"name": "Total government receipts","original_name": "Total_government_receipts"},
@@ -1301,7 +1301,8 @@ if(typeof(F1)=='undefined') {F1 = {};}
             self.toggleExtractive("Oil fields","all", true)     
             self.map.setMapStyle( {zoom: { offset: {x:15,y:90}}} )
             self.setExtractiveIndicator('Mines','Total production','Production',true)
-            self.map.addLayerCategoryFilter(self.stylelayers["Mines"].guid,{attribute:"Mineral type",categories:{"Gold":"http://maps.worldbank.org/images/icons/worldbank//extractives/small_gold.png","Bauxite":"http://maps.worldbank.org/images/icons/worldbank//extractives/small_bauxite.png","Manganese":"http://maps.worldbank.org/images/icons/worldbank//extractives/small_manganese.png","Other":"http://maps.worldbank.org/images/icons/worldbank/extractives/small_other.png"}})               
+            self.map.addLayerCategoryFilter(self.stylelayers["Mines"].guid,{attribute:"mineral ty",categories:{"Gold":"http://maps.worldbank.org/images/icons/worldbank//extractives/small_gold.png","Bauxite":"http://maps.worldbank.org/images/icons/worldbank//extractives/small_bauxite.png","Manganese":"http://maps.worldbank.org/images/icons/worldbank//extractives/small_manganese.png","Other":"http://maps.worldbank.org/images/icons/worldbank/extractives/small_other.png"}})
+            self.map.addLayerCategoryFilter(self.stylelayers["Mineral deposits"].guid,{attribute:"mineral ty",categories:{"Gold":"http://maps.worldbank.org/images/icons/worldbank//extractives/small_gold.png","Bauxite":"http://maps.worldbank.org/images/icons/worldbank//extractives/small_bauxite.png","Manganese":"http://maps.worldbank.org/images/icons/worldbank//extractives/small_manganese.png","Other":"http://maps.worldbank.org/images/icons/worldbank/extractives/small_other.png"}})
             self.minesPieChart() 
         }
         self.loadState();
