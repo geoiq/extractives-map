@@ -39,9 +39,7 @@ function fbs_click() {u=location.href;t=document.title;window.open('http://www.f
 
 if(typeof(F1)=='undefined') {F1 = {};}
 (function(){
-	
-
-	if(typeof String.prototype.trim != 'function') {
+		if(typeof String.prototype.trim != 'function') {
 		String.prototype.trim = function() {
 			return this.replace(/^\s+|\s+$/g, '');
 		}
@@ -1313,7 +1311,7 @@ if(typeof(F1)=='undefined') {F1 = {};}
             self.projectTable(self.projects);
             log("sortProjects");
             // self.projectFundingBars();
-            self.toggleSector("all", true, false);
+            self.toggleSector("all", false, false);
             log("sectorPieChart");
         }
         if(self.thematic_area == "m4r") { // for countries & regions
