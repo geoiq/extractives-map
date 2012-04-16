@@ -415,7 +415,8 @@ if(typeof(F1)=='undefined') {F1 = {};}
     showVisibleDeposits: function() {
         var self = this;
         var layer = "Mineral deposits"
-        self.map.clearFilters(self.stylelayers[layer].guid);             
+        self.map.clearFilters(self.stylelayers[layer].guid);
+ self.map.showLayer(self.stylelayers[layer].guid, true);
         var visibleDeposits = jq.map(jq('#ore_sectors li a'), function(el,index) {
             if( jq(el).hasClass('active'))
             return jq(el).attr("original-title")
@@ -423,7 +424,7 @@ if(typeof(F1)=='undefined') {F1 = {};}
         if(visibleDeposits.length != 0 ){
             self.map.showLayer(self.stylelayers[layer].guid, true);
             self.map.addFilter(self.stylelayers[layer].guid, 
-                {expression: self.complexFilterExpression(visibleDeposits, "mineral ty")});             
+                               {expression: self.complexFilterExpression(visibleDeposits, "mineral ty")});             
         } else {
             self.map.showLayer(self.stylelayers[layer].guid, false);
         }
@@ -1163,7 +1164,8 @@ if(typeof(F1)=='undefined') {F1 = {};}
     loadProjects: function(dataid) {
         var self = this;
         self.map.addLayer({source:"finder:" + dataid, categoryFilter: {attribute:major_sector_name,categories:self.wbicons}, styles: {opacity: 1.0}, zoomToExtent: true })
-
+// loadProjects is never called
+ 
     },
         styleMap: function() {
             var self = this;
