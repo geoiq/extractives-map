@@ -1,4 +1,5 @@
-var proxy_host = "http://geocommons.com";	   
+var proxy_host = "http://geocommons.com";
+var proxyicon_host = "./images";
 var project_attributes = ["id","project_name","totalamt","prodlinetext","grantamt","mjsector1","boardapprovaldate","majorsector_percent"];
 var major_sector_name = "mjsector 1";
 var barchart;
@@ -39,9 +40,7 @@ function fbs_click() {u=location.href;t=document.title;window.open('http://www.f
 
 if(typeof(F1)=='undefined') {F1 = {};}
 (function(){
-	
-
-	if(typeof String.prototype.trim != 'function') {
+		if(typeof String.prototype.trim != 'function') {
 		String.prototype.trim = function() {
 			return this.replace(/^\s+|\s+$/g, '');
 		}
@@ -105,7 +104,7 @@ if(typeof(F1)=='undefined') {F1 = {};}
 	"Population Density": {source: "finder:", title:"Population Density", subtitle: "Per square kilometer", styles: { type: "CHOROPLETH", stroke: {color: 0x222222}, fill: { colors: [0xFEE5D9, 0xFCAE91, 0xFB6A4A, 0xDE2D26, 0xA50F15], categories: 5, classificationNumClasses: 5, classificationType: "QUANTILE", opacity: 0.75, selectedAttribute: "Population density"}}, infosubtitle: null, table: null, description: "Population Density, measured in population per square kilometers, is a result of calculations made by the Mapping for Results team. Population data was compiled from statistics bureaus and used to calculate population density. The population data was divided by the total area for each province or district. Official population density statistics were used in place of these calculations where available. These data are estimates only and are not official numbers."},
 	"Mineral deposits": {source: "finder:", title:"Mineral deposits", selectedAttribute: "mineral", styles: {}},
 	"Mines": {source: "finder:", title:"Mines", selectedAttribute: "mines", styles: {}},
-	"Ghana Mango Farms": {source: "finder:", title:"Ghana Mango Farms", selectedAttribute: "oil", styles: {}}, 
+	"Oil wells": {source: "finder:", title:"Oil wells", selectedAttribute: "oil", styles: {}}, 
 	"District revenues": {source: "finder:", title:"District revenues", selectedAttribute: "TOTAL_REC", styles: {}}
 	
 	};
@@ -141,19 +140,19 @@ if(typeof(F1)=='undefined') {F1 = {};}
 	  if(this.thematic_area === undefined || this.thematic_area === null)
 	    this.thematic_area = "m4r";
 	    
-	  this.wbicons = {"Agriculture, fishing, and forestry":"http://maps.worldbank.org/images/icons/round/agriculture-16.png","Information and communications":"http://maps.worldbank.org/images/icons/round/communication-16.png","Education":"http://maps.worldbank.org/images/icons/round/education-16.png","Energy and mining":"http://maps.worldbank.org/images/icons/round/energy-16.png","Finance":"http://maps.worldbank.org/images/icons/round/finance-16.png","Health and other social services":"http://maps.worldbank.org/images/icons/round/health-16.png","Industry and trade":"http://maps.worldbank.org/images/icons/round/industry-16.png","Public Administration, Law, and Justice":"http://maps.worldbank.org/images/icons/round/public-16.png","Transportation":"http://maps.worldbank.org/images/icons/round/transportation-16.png","Water, sanitation and flood protection":"http://maps.worldbank.org/images/icons/round/water-16.png"};
+	  this.wbicons = {"Agriculture, fishing, and forestry":proxyicon_host + '/icons/round/agriculture-16.png',"Information and communications":proxyicon_host + '/icons/round/communication-16.png',"Education":proxyicon_host + '/icons/round/education-16.png',"Energy and mining":proxyicon_host + '/icons/round/energy-16.png',"Finance":proxyicon_host + '/icons/round/finance-16.png',"Health and other social services":proxyicon_host + '/icons/round/health-16.png',"Industry and trade":proxyicon_host + '/icons/round/industry-16.png',"Public Administration, Law, and Justice":proxyicon_host + '/icons/round/public-16.png',"Transportation":proxyicon_host + '/icons/round/transportation-16.png',"Water, sanitation and flood protection":proxyicon_host + '/icons/round/water-16.png'};
 	  var color_index = 3;
 	  this.sectors = {
-		"agriculture": {name: "Agriculture, fishing, and forestry", sector_code: "AX", color: self.fadeHex("#8bb131","#FFFFFF",10)[color_index], funding: 0, projects: [], activities: 0, shortname: "agriculture", icon: "http://maps.worldbank.org/images/icons/round/agriculture-on.png"}, 
-		"communications": {name: "Information and communications", sector_code: "CX", color: self.fadeHex("#395f8f","#FFFFFF",10)[color_index], funding: 0, projects: [], activities: 0, shortname: "communications", icon: "http://maps.worldbank.org/images/icons/round/communication-on.png"},
-		"education": {name: "Education", sector_code: "EX", color: self.fadeHex("#eebd00","#FFFFFF",10)[color_index], funding: 0, projects: [], activities: 0, shortname: "education", icon: "http://maps.worldbank.org/images/icons/round/education-on.png"}, 
-		"energy": {name: "Energy and mining", sector_code: "LX", color: self.fadeHex("#880000","#FFFFFF",10)[color_index],	funding: 0, projects: [], activities: 0, shortname: "energy", icon: "http://maps.worldbank.org/images/icons/round/energy-on.png"},
-		"finance": {name: "Finance", sector_code: "FX", color: self.fadeHex("#40823f","#FFFFFF",10)[color_index], funding: 0, projects: [], activities: 0, shortname: "finance", icon: "http://maps.worldbank.org/images/icons/round/finance-on.png"},
-		"health": {name: "Health and other social services", sector_code: "JX", color: self.fadeHex("#c23001","#FFFFFF",10)[color_index], funding: 0, projects: [], activities: 0, shortname: "health", icon: "http://maps.worldbank.org/images/icons/round/health-on.png"},
-		"industry": {name: "Industry and trade", sector_code: "YX", color: self.fadeHex("#7f4410","#FFFFFF",10)[color_index], funding: 0, projects: [], activities: 0, shortname: "industry", icon: "http://maps.worldbank.org/images/icons/round/industry-on.png"},
-		"public": {name: "Public Administration, Law, and Justice", sector_code: "BX", color: self.fadeHex("#8060a4","#FFFFFF",10)[color_index], funding: 0, projects: [], activities: 0, shortname: "public", icon: "http://maps.worldbank.org/images/icons/round/public-on.png"},
-		"water": {name: "Water, sanitation and flood protection", sector_code: "WX", color: self.fadeHex("#369fd0","#FFFFFF",10)[color_index], funding: 0, projects: [], activities: 0, shortname: "water", icon: "http://maps.worldbank.org/images/icons/round/water-on.png"},
-		"transportation": {name: "Transportation", sector_code: "TX", color: self.fadeHex("#d28807","#FFFFFF",10)[color_index], funding: 0, projects: [], activities: 0, shortname: "transportation", icon: "http://maps.worldbank.org/images/icons/round/transportation-on.png"}};
+		"agriculture": {name: "Agriculture, fishing, and forestry", sector_code: "AX", color: self.fadeHex("#8bb131","#FFFFFF",10)[color_index], funding: 0, projects: [], activities: 0, shortname: "agriculture", icon: proxyicon_host + '/icons/round/agriculture-on.'}, 
+		"communications": {name: "Information and communications", sector_code: "CX", color: self.fadeHex("#395f8f","#FFFFFF",10)[color_index], funding: 0, projects: [], activities: 0, shortname: "communications", icon: proxyicon_host + '/icons/round/communication-on.'},
+		"education": {name: "Education", sector_code: "EX", color: self.fadeHex("#eebd00","#FFFFFF",10)[color_index], funding: 0, projects: [], activities: 0, shortname: "education", icon: proxyicon_host + '/icons/round/education-on.'}, 
+		"energy": {name: "Energy and mining", sector_code: "LX", color: self.fadeHex("#880000","#FFFFFF",10)[color_index],	funding: 0, projects: [], activities: 0, shortname: "energy", icon: proxyicon_host + '/icons/round/energy-on.'},
+		"finance": {name: "Finance", sector_code: "FX", color: self.fadeHex("#40823f","#FFFFFF",10)[color_index], funding: 0, projects: [], activities: 0, shortname: "finance", icon: proxyicon_host + '/icons/round/finance-on.'},
+		"health": {name: "Health and other social services", sector_code: "JX", color: self.fadeHex("#c23001","#FFFFFF",10)[color_index], funding: 0, projects: [], activities: 0, shortname: "health", icon: proxyicon_host + '/icons/round/health-on.'},
+		"industry": {name: "Industry and trade", sector_code: "YX", color: self.fadeHex("#7f4410","#FFFFFF",10)[color_index], funding: 0, projects: [], activities: 0, shortname: "industry", icon: proxyicon_host + '/icons/round/industry-on.'},
+		"public": {name: "Public Administration, Law, and Justice", sector_code: "BX", color: self.fadeHex("#8060a4","#FFFFFF",10)[color_index], funding: 0, projects: [], activities: 0, shortname: "public", icon: proxyicon_host + '/icons/round/public-on.'},
+		"water": {name: "Water, sanitation and flood protection", sector_code: "WX", color: self.fadeHex("#369fd0","#FFFFFF",10)[color_index], funding: 0, projects: [], activities: 0, shortname: "water", icon: proxyicon_host + '/icons/round/water-on.'},
+		"transportation": {name: "Transportation", sector_code: "TX", color: self.fadeHex("#d28807","#FFFFFF",10)[color_index], funding: 0, projects: [], activities: 0, shortname: "transportation", icon: proxyicon_host + '/icons/round/transportation-on.'}};
 
 	  this.sector_names = {};
 	  this.sector_codes = {};
@@ -298,13 +297,13 @@ if(typeof(F1)=='undefined') {F1 = {};}
 	  var self = this;
 	  if(indicator == "District revenues") {
           self.map.showLayer(self.stylelayers["Mines"].guid, false);
-          self.map.showLayer(self.stylelayers["Ghana Mango Farms"].guid, false);	      
+          self.map.showLayer(self.stylelayers["Oil wells"].guid, false);	      
           self.map.showLayer(self.stylelayers["District revenues"].guid, true);
 	  }
 	  else {
           self.map.showLayer(self.stylelayers["District revenues"].guid, false);
           self.map.showLayer(self.stylelayers["Mines"].guid, true);
-          self.map.showLayer(self.stylelayers["Ghana Mango Farms"].guid, true);	      
+          self.map.showLayer(self.stylelayers["Oil wells"].guid, true);	      
 	  }
       
       var s_attr = F1.WorldBank.extractives[indicator]
@@ -324,12 +323,12 @@ if(typeof(F1)=='undefined') {F1 = {};}
 	toggleExtractive: function(layer,sector,visible) {   
 	    var self = this;
          if(layer == "Oil") {
-             if(sector == "Ghana Mango Farms") {
+             if(sector == "Oil wells") {
                  if((visible !== undefined && visible !== null && visible != true) || jq("#oilwells_control").hasClass("active")) {
-                     self.map.showLayer(self.stylelayers["Ghana Mango Farms"].guid, false);	      
+                     self.map.showLayer(self.stylelayers["Oil wells"].guid, false);	      
                      jq("#oilwells_control").removeClass('active').addClass('inactive');                     
                  } else {
-                     self.map.showLayer(self.stylelayers["Ghana Mango Farms"].guid, true);	      
+                     self.map.showLayer(self.stylelayers["Oil wells"].guid, true);	      
                      jq("#oilwells_control").removeClass('inactive').addClass('active');                     
                  }
              } else if (sector == "Oil fields") {
@@ -360,7 +359,7 @@ if(typeof(F1)=='undefined') {F1 = {};}
                     jq.each(jq('#mines_sectors li a'), function(el,index) {
                         jq(el).removeClass('active').addClass('inactive');
                     })
-                     self.map.showLayer(self.stylelayers["Ghana Mango Farms"].guid, false);
+                     self.map.showLayer(self.stylelayers["Oil wells"].guid, false);
                     jq("#allmine_control").attr("checked", false)
                  } else {                     
                      jq(classname).removeClass('active').addClass('inactive');                                      
@@ -417,7 +416,8 @@ if(typeof(F1)=='undefined') {F1 = {};}
     showVisibleDeposits: function() {
         var self = this;
         var layer = "Mineral deposits"
-        self.map.clearFilters(self.stylelayers[layer].guid);             
+        self.map.clearFilters(self.stylelayers[layer].guid);
+ self.map.showLayer(self.stylelayers[layer].guid, true);
         var visibleDeposits = jq.map(jq('#ore_sectors li a'), function(el,index) {
             if( jq(el).hasClass('active'))
             return jq(el).attr("original-title")
@@ -425,7 +425,7 @@ if(typeof(F1)=='undefined') {F1 = {};}
         if(visibleDeposits.length != 0 ){
             self.map.showLayer(self.stylelayers[layer].guid, true);
             self.map.addFilter(self.stylelayers[layer].guid, 
-                {expression: self.complexFilterExpression(visibleDeposits, "mineral ty")});             
+                               {expression: self.complexFilterExpression(visibleDeposits, "mineral ty")});             
         } else {
             self.map.showLayer(self.stylelayers[layer].guid, false);
         }
@@ -1103,7 +1103,7 @@ if(typeof(F1)=='undefined') {F1 = {};}
 	},	  
     getLayers: function() {
         var self = this;
-        var findlayers = ["Indicators", "Project Locations", "Project Counts", "Population", "Poverty", "Infant Mortality", "Maternal Health", "Malnutrition", "Unemployment Rate", "Population Density", "Mines", "Ghana Mango Farms", "Oil fields", "District revenues", "Mineral deposits", "No Data", "Total employment"];
+        var findlayers = ["Indicators", "Project Locations", "Project Counts", "Population", "Poverty", "Infant Mortality", "Maternal Health", "Malnutrition", "Unemployment Rate", "Population Density", "Mines", "Oil wells", "Oil fields", "District revenues", "Mineral deposits", "No Data", "Total employment"];
         possibleLayers = self.map.getLayers();
         
         var index;
@@ -1136,7 +1136,7 @@ if(typeof(F1)=='undefined') {F1 = {};}
             "World Bank projects": "csv",
             "Mines": "csv",
             "District revenues": "csv",
-            "Ghana Mango Farms": "shapefile",
+            "Oil wells": "csv",
             "Oil fields": "shapefile",
             "Oil blocks": "shapefile",
             "Population density": "shapefile",
@@ -1165,7 +1165,8 @@ if(typeof(F1)=='undefined') {F1 = {};}
     loadProjects: function(dataid) {
         var self = this;
         self.map.addLayer({source:"finder:" + dataid, categoryFilter: {attribute:major_sector_name,categories:self.wbicons}, styles: {opacity: 1.0}, zoomToExtent: true })
-
+// loadProjects is never called
+ 
     },
         styleMap: function() {
             var self = this;
@@ -1298,11 +1299,11 @@ if(typeof(F1)=='undefined') {F1 = {};}
             jq('#mapped_locations_header').html("mapped locations")
             self.toggleExtractive("Mines","all", true)
             self.toggleExtractive("Mineral deposits","all", false)
-            self.toggleExtractive("Oil","Ghana Mango Farms", false)     
+            self.toggleExtractive("Oil","all", true)     
             self.map.setMapStyle( {zoom: { offset: {x:15,y:90}}} )
             self.setExtractiveIndicator('Mines','Total production','Production',true)
-            self.map.addLayerCategoryFilter(self.stylelayers["Mines"].guid,{attribute:"mineral ty",categories:{"Gold":"http://maps.worldbank.org/images/icons/worldbank//extractives/small_gold.png","Bauxite":"http://maps.worldbank.org/images/icons/worldbank//extractives/small_bauxite.png","Manganese":"http://maps.worldbank.org/images/icons/worldbank//extractives/small_manganese.png","Other":"http://maps.worldbank.org/images/icons/worldbank/extractives/small_other.png"}})
-            self.map.addLayerCategoryFilter(self.stylelayers["Mineral deposits"].guid,{attribute:"mineral ty",categories:{"Gold":"http://maps.worldbank.org/images/icons/worldbank//extractives/small_gold.png","Bauxite":"http://maps.worldbank.org/images/icons/worldbank//extractives/small_bauxite.png","Manganese":"http://maps.worldbank.org/images/icons/worldbank//extractives/small_manganese.png","Other":"http://maps.worldbank.org/images/icons/worldbank/extractives/small_other.png"}})
+            self.map.addLayerCategoryFilter(self.stylelayers["Mines"].guid,{attribute:"mineral ty",categories:{"Gold":proxyicon_host + '/icons/worldbank//extractives/small_gold.',"Bauxite":proxyicon_host + '/icons/worldbank//extractives/small_bauxite.',"Manganese":proxyicon_host + '/icons/worldbank//extractives/small_manganese.',"Other":proxyicon_host + '/icons/worldbank/extractives/small_other.'}})
+            self.map.addLayerCategoryFilter(self.stylelayers["Mineral deposits"].guid,{attribute:"mineral ty",categories:{"Gold":proxyicon_host + '/icons/worldbank//extractives/small_gold.',"Bauxite":proxyicon_host + '/icons/worldbank//extractives/small_bauxite.',"Manganese":proxyicon_host + '/icons/worldbank//extractives/small_manganese.',"Other":proxyicon_host + '/icons/worldbank/extractives/small_other.'}})
             self.minesPieChart() 
         }
         self.loadState();
@@ -1313,7 +1314,7 @@ if(typeof(F1)=='undefined') {F1 = {};}
             self.projectTable(self.projects);
             log("sortProjects");
             // self.projectFundingBars();
-            self.toggleSector("all", true, false);
+            self.toggleSector("all", false, false);
             log("sectorPieChart");
         }
         if(self.thematic_area == "m4r") { // for countries & regions
