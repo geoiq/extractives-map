@@ -1298,7 +1298,7 @@ if(typeof(F1)=='undefined') {F1 = {};}
             jq('#mapped_locations_header').html("mapped locations")
             self.toggleExtractive("Mines","all", true)
             self.toggleExtractive("Mineral deposits","all", false)
-            self.toggleExtractive("Oil fields","all", true)     
+            self.toggleExtractive("Oil","Ghana Mango Farms", false)     
             self.map.setMapStyle( {zoom: { offset: {x:15,y:90}}} )
             self.setExtractiveIndicator('Mines','Total production','Production',true)
             self.map.addLayerCategoryFilter(self.stylelayers["Mines"].guid,{attribute:"mineral ty",categories:{"Gold":"http://maps.worldbank.org/images/icons/worldbank//extractives/small_gold.png","Bauxite":"http://maps.worldbank.org/images/icons/worldbank//extractives/small_bauxite.png","Manganese":"http://maps.worldbank.org/images/icons/worldbank//extractives/small_manganese.png","Other":"http://maps.worldbank.org/images/icons/worldbank/extractives/small_other.png"}})
