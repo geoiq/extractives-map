@@ -3,7 +3,7 @@ F1.WorldBank.extractives = {
     "Mineral deposits": {},
     "Population density": {},
      "Ghana Mango Farms": {
- "infoWindowFilter": {"title": "$[Farmname]","tabs": [{"title": "Farm Info","type": "text","value": "Owner name: $[Ownername]\nFarm Size: $[Acres] Acres"}]},
+ infoWindowFilter: {"title": "$[Farmname]","tabs": [{"title": "Farm Info","type": "text","value": "Owner name: $[Ownername]\nFarm Size: $[Acres] Acres"}]},
  "Lift total": { "infoWindowFilter": {"title": "$[Farmname]","tabs": [{"title": "Farm Info","type": "text","value": "Owner name: $[Ownername]\nFarm Size: $[Acres] Acres"}]}},
  "Sale total": {"infoWindowFilter": {"title": "$[Farmname]","tabs": [{"title": "Farm Info","type": "text","value": "Owner name: $[Ownername]\nFarm Size: $[Acres] Acres"}]}},
  "Location": {"infoWindowFilter": {"title": "$[Farmname]","tabs": [{"title": "Farm Info","type": "text","value": "Owner name: $[Ownername]\nFarm Size: $[Acres] Acres"}]}
