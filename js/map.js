@@ -104,7 +104,7 @@ if(typeof(F1)=='undefined') {F1 = {};}
 	"Population Density": {source: "finder:", title:"Population Density", subtitle: "Per square kilometer", styles: { type: "CHOROPLETH", stroke: {color: 0x222222}, fill: { colors: [0xFEE5D9, 0xFCAE91, 0xFB6A4A, 0xDE2D26, 0xA50F15], categories: 5, classificationNumClasses: 5, classificationType: "QUANTILE", opacity: 0.75, selectedAttribute: "Population density"}}, infosubtitle: null, table: null, description: "Population Density, measured in population per square kilometers, is a result of calculations made by the Mapping for Results team. Population data was compiled from statistics bureaus and used to calculate population density. The population data was divided by the total area for each province or district. Official population density statistics were used in place of these calculations where available. These data are estimates only and are not official numbers."},
 	"Mineral deposits": {source: "finder:", title:"Mineral deposits", selectedAttribute: "mineral", styles: {}},
 	"Mines": {source: "finder:", title:"Mines", selectedAttribute: "mines", styles: {}},
-	"Ghana Mango Farms": {source: "finder:", title:"Ghana Mango Farms", selectedAttribute: "oil", styles: {}}, 
+	"Ghana Mango Farms": {source: "finder:", title:"Ghana Mango Farms", selectedAttribute: "FARMNAME", styles: {}}, 
 	"District revenues": {source: "finder:", title:"District revenues", selectedAttribute: "TOTAL_REC", styles: {}}
 	
 	};
