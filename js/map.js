@@ -323,8 +323,10 @@ if(typeof(F1)=='undefined') {F1 = {};}
 	toggleExtractive: function(layer,sector,visible) {   
 	    var self = this;
          if(layer == "Oil") {
-             if(sector == "Ghana Mango Farms") {
-                 if((visible !== undefined && visible !== null && visible != true) || jq("#oilwells_control").hasClass("active")) {
+ log("In oil")            
+ if(sector == "Ghana Mango Farms") {
+ log("In Mango Farms")             
+ if((visible !== undefined && visible !== null && visible != true) || jq("#oilwells_control").hasClass("active")) {
                      self.map.showLayer(self.stylelayers["Ghana Mango Farms"].guid, false);	      
                      jq("#oilwells_control").removeClass('active').addClass('inactive');                     
                  } else {
@@ -1405,3 +1407,4 @@ if(typeof(F1)=='undefined') {F1 = {};}
 
 })();
   
+
