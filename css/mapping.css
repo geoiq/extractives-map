@@ -64,7 +64,7 @@ a:hover {
     margin-top: 16px;
 }
 .network-name {
-    background: url("img/sprite.png") no-repeat scroll 10px 20px transparent;
+    background: url("img/sprite_cersgis.png '") no-repeat scroll 10px 20px transparent;
     float: left;
     height: 80px;
     margin: 0 0 23px;
@@ -118,7 +118,7 @@ ul.links li, ul.links li a{
     text-transform: uppercase;
 }
 .network-search input.form-text {
-    background: url("img/sprite.png") no-repeat scroll 0 -399px transparent;
+    background: url("img/sprite_cersgis.png '") no-repeat scroll 0 -399px transparent;
     border: 1px solid #CCCCCC;
     float: right;
 	margin-right: -1px;
@@ -143,7 +143,7 @@ ul.links li, ul.links li a{
 	top: 20px;	
 }
 .navigation {
-    background: url("img/sprite.png") repeat-x scroll 0 -70px transparent;
+    background: url("img/sprite_cersgis.png '") repeat-x scroll 0 -70px transparent;
     clear: both;
     font-size: 11px;
     font-weight: bold;
@@ -163,7 +163,7 @@ ul.links li, ul.links li a{
 	display: none;l	
 }
 .navigation li a.active .point{
-	background: url("img/sprite.png") no-repeat right bottom transparent;
+	background: url("img/sprite_cersgis.png '") no-repeat right bottom transparent;
 	bottom: -4px;
 	display: block;
 	height: 4px;
@@ -183,7 +183,7 @@ ul.links li, ul.links li a{
     line-height: 27px;
 }
 .navigation .network-home {
-    background: url("img/sprite.png") no-repeat scroll 6px -375px transparent;
+    background: url("img/sprite_cersgis.png '") no-repeat scroll 6px -375px transparent;
     border-right: 2px solid #fff;
     overflow: hidden;
     text-indent: -999px;
@@ -199,7 +199,7 @@ ul.links li, ul.links li a{
     border: 0 none;
 }
 .navigation .links a.active{
-    background: url("img/sprite.png") repeat scroll 0 -130px transparent;
+    background: url("img/sprite_cersgis.png '") repeat scroll 0 -130px transparent;
     border-left: 1px solid #CC4433;
     border-right: 1px solid #CC4433;
     margin: 0 0 0 -1px;
@@ -207,7 +207,7 @@ ul.links li, ul.links li a{
     padding-top: 6px;
 }
 .navigation .network-special-links {
-    background: url("img/sprite.png") repeat-x scroll 0 -100px transparent;
+    background: url("img/sprite_cersgis.png '") repeat-x scroll 0 -100px transparent;
     border-left: 2px solid #fff;
     float: right;
 }
@@ -230,7 +230,7 @@ ul.links li, ul.links li a{
 	top: 3px;
 }
 #local {
-    background: url("img/sprite.png") repeat-x scroll 0 -170px transparent;
+    background: url("img/sprite_cersgis.png '") repeat-x scroll 0 -170px transparent;
 	clear: both;
     height: 60px;
 }
@@ -640,8 +640,8 @@ ul.links li, ul.links li a{
     min-height: 514px;
 }
 a.legend{
-	background: #666 url('img/sprite.png') no-repeat 100% -524px;
-	background: rgba(102,102,102,0.8) url('img/sprite.png') no-repeat 100% -524px;
+	background: #666 url('img/sprite_cersgis.png '') no-repeat 100% -524px;
+	background: rgba(102,102,102,0.8) url('img/sprite_cersgis.png '') no-repeat 100% -524px;
 	bottom: -3px;
 	color: #fff;
 	display: block;
@@ -652,7 +652,7 @@ a.legend{
 	z-index: 10;
 }
 a.moreData{
-	background: #666 url('img/sprite.png') 100% -508px;
+	background: #666 url('img/sprite_cersgis.png '') 100% -508px;
 	clear: both;
 	color: #fff;
 	float: right;
@@ -748,7 +748,7 @@ a.mag-glass{
 	top: 8px;	
 }
 #project-info a span{
-	background: url('img/sprite.png') no-repeat 100% -615px;
+	background: url('img/sprite_cersgis.png '') no-repeat 100% -615px;
 	display: block;
 	float: left;
 	height: 7px;
@@ -756,7 +756,7 @@ a.mag-glass{
 	width: 11px
 }
 #project-info a.ascending span{
-	background: url('img/sprite.png') no-repeat 100% -585px;
+	background: url('img/sprite_cersgis.png '') no-repeat 100% -585px;
 }
 #project-info tr {
     cursor: pointer;    
@@ -838,7 +838,7 @@ tr.row_even td{
     margin: 20px 0 2px;
 }
 #network-breadcrumb .limiter {
-    background: url("img/sprite.png") repeat-x scroll 0 -170px transparent;
+    background: url("img/sprite_cersgis.png '") repeat-x scroll 0 -170px transparent;
     color: #FFFFFF;
     font-size: 11px;
     font-weight: bold;
@@ -852,7 +852,7 @@ tr.row_even td{
     float: left;
 }
 #network-breadcrumb .breadcrumb-link {
-    background: url("img/sprite.png") no-repeat scroll 100% -290px transparent;
+    background: url("img/sprite_cersgis.png '") no-repeat scroll 100% -290px transparent;
     float: left;
     padding: 0 20px 0 15px;
 }
@@ -883,7 +883,7 @@ tr.row_even td{
     color: #D8DCD4;
 }
 #network-footer .limiter {
-    background: url("img/sprite.png") repeat-x scroll 0 -230px transparent;
+    background: url("img/sprite_cersgis.png '") repeat-x scroll 0 -230px transparent;
     color: #92948C;
     font-size: 11px;
     height: 40px;
@@ -898,7 +898,7 @@ tr.row_even td{
     float: left;
 }
 #network-footer .network-name {
-    background: url("img/sprite.png") no-repeat scroll 15px -347px transparent;
+    background: url("img/sprite_cersgis.png '") no-repeat scroll 15px -347px transparent;
     height: 30px;
     margin: 5px 0 0;
     overflow: hidden;
