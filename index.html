@@ -7,7 +7,7 @@
 
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>The World Bank - Mapping the Extractive Industries</title>
+    <title>The Extractive Industries Map of Ghana</title>
     <meta name="keywords" content="Ghana,Extractives in Africa,Extractive Industries,World,health,poverty,millenium development goals,indicators,development,humanitarian">
     <meta name="author" content="World Bank">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -20,6 +20,7 @@
 <script type="text/javascript" charset="utf-8" src="./js/tmpl.js"></script>
 <script type="text/javascript" charset="utf-8" src="http://geocommons.com/javascripts/f1.api.js"></script>
 <script src="./js/map.js" type="text/javascript"></script>
+<script src="./js/extractives.js" type="text/javascript"></script>
 
     <script type="text/javascript" charset="utf-8">
       // if (top.frames.length!=0)
@@ -146,15 +147,15 @@
               <ul class="dropmenu_options">
                 
                 
-                <li><a href="#" onclick="wb.setIndicator('Population Density'); return false">Soil type</a></li>
+                <li><a href="#" onclick="wb.setIndicator('Population Density'); return false">Population Density</a></li>
                 
                 
                 
-                <li><a href="#" onclick="wb.setIndicator('Unemployment Rate'); return false">Rainfall</a></li>
+                <li><a href="#" onclick="wb.setIndicator('Unemployment Rate'); return false">Unemployment Rate</a></li>
                 
                 
                 
-                <li><a href="#" onclick="wb.setIndicator('Malnutrition'); return false">Elevation</a></li>
+                <li><a href="#" onclick="wb.setIndicator('Malnutrition'); return false">Malnutrition</a></li>
                 
                 
                 
@@ -245,7 +246,7 @@
       <li class="dropmenu_category">District Revenues</li>
       <li><a href="#" onclick="wb.setExtractiveIndicator('District revenues','Total revenues received','Revenues',true); return false">Revenues</a></li>
 
-      <li class="dropmenu_category">Ghana Mango Farms</li>
+      <li class="dropmenu_category">Oil Wells</li>
       <li><a href="#" onclick="wb.setExtractiveIndicator('Oil wells','Lift total','Production',true); return false">Production</a></li>
       <li><a href="#" onclick="wb.setExtractiveIndicator('Oil wells','Sale total','Oil sales',true); return false">Oil sales</a></li>
       <li><a href="#" onclick="wb.setExtractiveIndicator('Oil wells','Location','Location',true); return false">Location</a></li>
@@ -284,7 +285,7 @@
     <ul id="oil_sectors">
       <li style="margin-left: 11px; margin-right: 11px;">Oil:</li>
       <li class="eoildeposit"><a  sector-name="oildeposit" original-title="Oil fields" class="active" id="oildeposits_control" href="#">1</a></li>
-      <li class="eoilwell"><a  sector-name="oilwell" original-title="Ghana Mango Farms" class="active" id="oilwells_control" href="#">2</a></li>
+      <li class="eoilwell"><a  sector-name="oilwell" original-title="Oil wells" class="active" id="oilwells_control" href="#">2</a></li>
       
       <li class="all"><form action="" method="get">
         <input name="input" id="alloil_control" class="active" type="checkbox" value="" CHECKED/>
@@ -294,7 +295,7 @@
     </ul>              
   </div>
 </div>
-<script src="./js/extractives.js" type="text/javascript"></script>
+
 
 
         </div>
@@ -409,7 +410,7 @@
   wb = new F1.WorldBank();
   var projects = [];
       
-  wb.init("160216",  "Ghana", "Citrus farms in identified districts", {projects_count: '39', locations_count: '14', projects: projects, locations_layer: 0, indicators: ['Population Density','Unemployment Rate','Malnutrition','Infant Mortality','Maternal Health','Total employment'], layers: null, page_type: "country", thematic_area: "extractives_controls"}, false);
+  wb.init("152433",  "Ghana", "Extractives in Africa", {projects_count: '39', locations_count: '14', projects: projects, locations_layer: 0, indicators: ['Population Density','Unemployment Rate','Malnutrition','Infant Mortality','Maternal Health','Total employment'], layers: null, page_type: "country", thematic_area: "extractives_controls"}, false);
   
   }
 </script>
