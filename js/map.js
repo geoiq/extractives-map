@@ -104,7 +104,7 @@ if(typeof(F1)=='undefined') {F1 = {};}
 	"Population Density": {source: "finder:", title:"Population Density", subtitle: "Per square kilometer", styles: { type: "CHOROPLETH", stroke: {color: 0x222222}, fill: { colors: [0xFEE5D9, 0xFCAE91, 0xFB6A4A, 0xDE2D26, 0xA50F15], categories: 5, classificationNumClasses: 5, classificationType: "QUANTILE", opacity: 0.75, selectedAttribute: "Population density"}}, infosubtitle: null, table: null, description: "Population Density, measured in population per square kilometers, is a result of calculations made by the Mapping for Results team. Population data was compiled from statistics bureaus and used to calculate population density. The population data was divided by the total area for each province or district. Official population density statistics were used in place of these calculations where available. These data are estimates only and are not official numbers."},
 	"Mineral deposits": {source: "finder:", title:"Mineral deposits", selectedAttribute: "mineral", styles: {}},
 	"Mines": {source: "finder:", title:"Mines", selectedAttribute: "mines", styles: {}},
-	"Oil wells": {source: "finder:", title:"Oil wells", selectedAttribute: "oil", styles: {}}, 
+	"Ghana Mango Farms": {source: "finder:", title:"Ghana Mango Farms", selectedAttribute: "oil", styles: {}}, 
 	"District revenues": {source: "finder:", title:"District revenues", selectedAttribute: "TOTAL_REC", styles: {}}
 	
 	};
@@ -297,13 +297,13 @@ if(typeof(F1)=='undefined') {F1 = {};}
 	  var self = this;
 	  if(indicator == "District revenues") {
           self.map.showLayer(self.stylelayers["Mines"].guid, false);
-          self.map.showLayer(self.stylelayers["Oil wells"].guid, false);	      
+          self.map.showLayer(self.stylelayers["Ghana Mango Farms"].guid, false);	      
           self.map.showLayer(self.stylelayers["District revenues"].guid, true);
 	  }
 	  else {
           self.map.showLayer(self.stylelayers["District revenues"].guid, false);
           self.map.showLayer(self.stylelayers["Mines"].guid, true);
-          self.map.showLayer(self.stylelayers["Oil wells"].guid, true);	      
+          self.map.showLayer(self.stylelayers["Ghana Mango Farms"].guid, true);	      
 	  }
       
       var s_attr = F1.WorldBank.extractives[indicator]
@@ -323,12 +323,12 @@ if(typeof(F1)=='undefined') {F1 = {};}
 	toggleExtractive: function(layer,sector,visible) {   
 	    var self = this;
          if(layer == "Oil") {
-             if(sector == "Oil wells") {
+             if(sector == "Ghana Mango Farms") {
                  if((visible !== undefined && visible !== null && visible != true) || jq("#oilwells_control").hasClass("active")) {
-                     self.map.showLayer(self.stylelayers["Oil wells"].guid, false);	      
+                     self.map.showLayer(self.stylelayers["Ghana Mango Farms"].guid, false);	      
                      jq("#oilwells_control").removeClass('active').addClass('inactive');                     
                  } else {
-                     self.map.showLayer(self.stylelayers["Oil wells"].guid, true);	      
+                     self.map.showLayer(self.stylelayers["Ghana Mango Farms"].guid, true);	      
                      jq("#oilwells_control").removeClass('inactive').addClass('active');                     
                  }
              } else if (sector == "Oil fields") {
@@ -359,7 +359,7 @@ if(typeof(F1)=='undefined') {F1 = {};}
                     jq.each(jq('#mines_sectors li a'), function(el,index) {
                         jq(el).removeClass('active').addClass('inactive');
                     })
-                     self.map.showLayer(self.stylelayers["Oil wells"].guid, false);
+                     self.map.showLayer(self.stylelayers["Ghana Mango Farms"].guid, false);
                     jq("#allmine_control").attr("checked", false)
                  } else {                     
                      jq(classname).removeClass('active').addClass('inactive');                                      
@@ -1103,7 +1103,8 @@ if(typeof(F1)=='undefined') {F1 = {};}
 	},	  
     getLayers: function() {
         var self = this;
-        var findlayers = ["Indicators", "Project Locations", "Project Counts", "Population", "Poverty", "Infant Mortality", "Maternal Health", "Malnutrition", "Unemployment Rate", "Population Density", "Mines", "Oil wells", "Oil fields", "District revenues", "Mineral deposits", "No Data", "Total employment"];
+        var findlayers = ["Indicators", "Project Locations", "Project Counts", "Population", "Poverty", "Infant Mortality", "Maternal Health", "Malnutrition", "Unemployment Rate", "Population Density", "Mines", "Ghana Mango Farms", "Oil fields", "District revenues", "Mineral deposits", "No Data", "Total employment"];
+ log("found layers")
         possibleLayers = self.map.getLayers();
         
         var index;
@@ -1136,7 +1137,7 @@ if(typeof(F1)=='undefined') {F1 = {};}
             "World Bank projects": "csv",
             "Mines": "csv",
             "District revenues": "csv",
-            "Oil wells": "csv",
+            "Ghana Mango Farms": "csv",
             "Oil fields": "shapefile",
             "Oil blocks": "shapefile",
             "Population density": "shapefile",
