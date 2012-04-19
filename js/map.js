@@ -914,7 +914,7 @@ if(typeof(F1)=='undefined') {F1 = {};}
             opts["href"] = links;
         }
 
-        F1.Visualizer.charts.pie(190, width, pie_options, "chart-left-pie-chart", opts);		  
+        F1.Visualizer.charts.pie(100, width, pie_options, "chart-left-pie-chart", opts);		  
 
 	},
 	minesPieChart: function() {
@@ -1139,7 +1139,7 @@ if(typeof(F1)=='undefined') {F1 = {};}
             "World Bank projects": "csv",
             "Mines": "csv",
             "District revenues": "csv",
-            "Ghana Mango Farms": "csv",
+            "Ghana Mango Farms": "shapefile",
             "Oil fields": "shapefile",
             "Oil blocks": "shapefile",
             "Population density": "shapefile",
